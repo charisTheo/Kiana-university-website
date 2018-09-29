@@ -1,0 +1,65 @@
+
+/**************************
+*************************** 
+          Mixins 
+***************************
+**************************/
+
+@mixin extra-small-and-above {
+  @media only screen and (min-width: 320px - 1) {
+    @content;
+  }
+}
+
+@mixin small-and-above {
+  @media only screen and (min-width: 480px - 1) {
+    @content;
+  }
+}
+
+@mixin tablets-and-above {
+  @media only screen and (min-width: 768px - 1) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 960px - 1) {
+    @content;
+  }
+}
+
+@mixin wide-desktop {
+  @media only screen and (min-width: 1280 - 1) {
+    @content;
+  }
+}
+
+@mixin transitions($property, $duration, $type, $delay) {
+  transition: $property $duration $type $delay;
+  -moz-transition: $property $duration $type $delay;
+  -ms-transition: $property $duration $type $delay;
+  -webkit-transition: $property $duration $type $delay;
+}
+
+@mixin linear-gradient($color1, $color2) {
+  background-image: linear-gradient(90deg, $color1, $color2 10%, $color1);
+  -ms-background-image: linear-gradient(90deg, $color1, $color2 10%, $color1);
+  -webkit-background-image: linear-gradient(90deg, $color1, $color2 10%, $color1);
+  -moz-background-image: linear-gradient(90deg, $color1, $color2 10%, $color1);
+}
+
+@mixin rotation($degrees) {  
+  transform: rotate($degrees);
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees) 
+} 
+
+@mixin transition-all() {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  -ms-transition: all 0.35s;
+	-o-transition: all 0.35s;
+	transition: all 0.35s;
+}

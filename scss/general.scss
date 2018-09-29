@@ -1,0 +1,45 @@
+*, body, html {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+$grey: SlateGray;
+$red: rgb(150, 0, 0);
+$red-faded: rgba(150, 0, 0, .7);
+$white: #FCFAE1;
+
+body {
+  @include desktop(){
+    background-color: #2E0927;
+  }
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;  
+  scroll-behavior: smooth;
+  text-align: center;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.title {
+  font-family: "Exo 2", Helvetica, Arial, sans-serif;
+  color: #960000;
+  text-shadow: 0 0 5px rgba(150, 0, 0, 0.7);
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.page-loader {
+	  display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/oval.svg') 50% 50% no-repeat $red;
+}

@@ -1,0 +1,64 @@
+
+/**************************
+*************************** 
+    Description - Main 
+***************************
+**************************/
+#photoDiv {
+  float: left;
+  .row{
+    .photo {
+      margin: auto;
+      width: auto;
+      padding: 10px;
+      position: relative;
+
+      .photo-image {
+        @include small-and-above(){
+          display: inline;
+        }
+
+        img {
+          @include tablets-and-above(){
+            width: 180px;
+          }
+          width: 100px;
+          height: auto;
+          border-radius: 50%;
+          box-shadow: 0 0 10px $white;
+        }
+      }
+    }
+  }
+}
+
+#descriptionDiv {
+  display: table-cell;
+  float: right;
+  .description {
+    padding: 50px;
+  }
+}
+
+.about {
+  @include tablets-and-above(){
+    margin: -30px 5px 20px;
+    float: left;
+    max-width: 50%;
+    padding: 0;
+  }
+  padding: 25px 0;
+  margin: 20px 5px;
+  display: inline-block;
+  .row-container {
+    padding: 10px 15px;
+    h3 {
+      text-align: left;      
+    }
+    .about-me {
+      word-spacing: 10px;
+      text-align: left;
+    }
+  }
+}
+

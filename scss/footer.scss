@@ -1,0 +1,25 @@
+
+/**************************
+*************************** 
+          Footer 
+***************************
+**************************/
+
+footer {
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  margin-top: 30px;
+  .footer-images {
+    padding: 10px;
+    overflow: hidden;
+    a {
+      img {
+        height: 70px;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+
